@@ -71,4 +71,48 @@ Reverse String
 >
 >*Notes on Method 3*:
 >- [MDN docs on Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+>
+
+Palindrome
+-------------
+> **Directions**
+> *Given a string, return true if the string is a palindrome or false if it is not. Palindromes are strings that form the same word if it is reversed. Do include spaces and punctuation in determining if the string is a palindrome.*
+>
+> **Example Output**:
+> ```
+> //   palindrome("abba") === true
+> //   palindrome("abcdefg") === false
+> ```
+>
+>**How to break down this problem**
+>
+>*Method 1- reverse & comparison*
+>- Reverse the string passed in.
+>- Compare the reversed string to the original string to return a boolean value.
+>
+> *Example Code*:
+> ```
+> function palindrome(str) {
+>  const reversed = str.split('').reverse().join('');
+>  return str === reversed;
+>}
+> ```
+>
+>*Method 2 - use of Array.prototype.every()*
+>- Use ```split()``` to convert ```str``` into an ```array```.
+>- Use ```every()``` array helper to check the contents of the array and return a ```boolean```.
+>
+>*Example Code*:
+>```
+>function palindrome(str) {
+>  return str.split('').every((char, i) => {
+>    return char === str[str.length - i - 1];
+>  });
+>}
+>
+>```
+>
+>*Notes about Method 2*:
+>- In this particular case, you will notice that after iterating through half the ```array``` you are doing checks that have been made already.
+>
 > 
