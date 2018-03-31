@@ -113,6 +113,46 @@ Palindrome
 >```
 >
 >*Notes about Method 2*:
->- In this particular case, you will notice that after iterating through half the ```array``` you are doing checks that have been made already.
+>- In this particular case, you will notice that after iterating through half the ```array``` you are doing checks that have been made already. One way to avoid doing excess checks is to ```divide``` the ```array``` ```length``` by ```2```.
+>- [MDN docs on Array.prototype.every()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
 >
-> 
+
+Reverse Integer
+-------------
+> **Directions**
+> *Given an integer, return an integer that is the reverse ordering of numbers.*
+>
+> **Example Output**:
+> ```
+> //   reverseInt(15) === 51
+>//   reverseInt(981) === 189
+>//   reverseInt(500) === 5
+>//   reverseInt(-15) === -51
+>//   reverseInt(-90) === -9
+> ```
+>
+>**How to break down this problem**
+>
+>*Method 1- toString(), Math.sign(), and parseInt() *
+>- Convert the passed in ```integer``` into a ```string```.
+>- ```split``` the ```string``` into an ```array```.
+>- ```reverse``` the ```array```.
+>- ```join``` back to a ```string```.
+>- convert back to an ```integer```, ```multiply``` by the ```sign``` of the passed in ```integer```, and ```return```.
+>
+> *Example Code*:
+> ```
+> function reverseInt(n) {
+>  const reversed = n
+>    .toString()
+>    .split('')
+>    .reverse()
+>    .join('');
+>  return parseInt(reversed) * Math.sign(n);
+>}
+> ```
+>
+> *Notes about Method 1*:
+> - [MDN docs on Object.prototype.toString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)
+>- [MDN docs on Math.sign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sign)
+>- [MED docs on parseInt()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
