@@ -156,3 +156,26 @@ Reverse Integer
 > - [MDN docs on Object.prototype.toString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)
 >- [MDN docs on Math.sign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sign)
 >- [MED docs on parseInt()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
+>
+
+Max Character
+-------------
+> **Directions**
+>*Given a string, return the character that is most commonly used in the string.*
+>
+>
+> **Example Output**:
+> ```
+>// maxChar("abcccccccd") === "c"
+>// maxChar("apple 1231111") === "1"
+> ```
+>
+>**How to break down this problem**
+>- You will want to convert the passed in ```string``` into an ```object```, where the ```key```s are the ```character```s and the ```value```s are the ```number``` of times that ```character``` appears in the given ```string```.
+>- This concept of building a map of ```items``` seen in a given ```string```, can be used to solve many common ```string``` questions. Such as:
+>1. *What is the most common character in the string?*
+>2. *Does string 'A' have the same characters as string 'B' (is it an anagram)?*
+>3. *Does the given string have any repeated characters in it?*
+>- After building the object, we can ```iterate``` through the object and find the ```character``` with the highest ```value```.
+>-
+> 
