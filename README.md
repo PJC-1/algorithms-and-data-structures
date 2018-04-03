@@ -208,3 +208,39 @@ Max Character
 >- Article on [How to add a key-value pair to javascript object](https://stackoverflow.com/questions/1168807/how-can-i-add-a-key-value-pair-to-a-javascript-object)
 >- [MDN docs on for...in loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
 >
+
+Fizzbuzz
+-------------
+> **Directions**
+>*Write a program that console logs the numbers from 1 to n. But for multiples of three print "fizz" instead of the number and for the multiples of fine print "buzz" For numbers which are multiples of both three and five print "fizzbuzz".*
+>
+> **Example Output**:
+>```
+>//   fizzBuzz(5);
+>//   1
+>//   2
+>//   fizz
+>//   4
+>//   buzz
+>```
+>
+>*Example Code*:
+>```
+>function fizzBuzz(n) {
+>  for(let i = 1; i <= n; i++) {
+>    if(i % 15 === 0) {
+>      console.log('fizzbuzz');
+>    } else if(i % 3 === 0) {
+>      console.log('fizz');
+>    } else if(i % 5 === 0) {
+>      console.log('buzz');
+>    } else {
+>      console.log(i);
+>    }
+>  }
+>}
+>```
+>
+>*Notes*:
+>- **fizzbuzz** is a good example of when a basic ```for``` loop is an appropriate choice.
+>
