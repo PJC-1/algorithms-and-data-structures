@@ -177,5 +177,34 @@ Max Character
 >2. *Does string 'A' have the same characters as string 'B' (is it an anagram)?*
 >3. *Does the given string have any repeated characters in it?*
 >- After building the object, we can ```iterate``` through the object and find the ```character``` with the highest ```value```.
->-
-> 
+>
+>*Example Code*:
+>```
+>function maxChar(str) {
+>  let charMap = {};
+>  let max = 0;
+>  let maxChar = '';
+>
+>  for (let char of str) {
+>    if (charMap[char]) {
+>      charMap[char]++;
+>    } else {
+>      charMap[char] = 1;
+>    }
+>  }
+>
+>  for (let char in charMap) {
+>    if (charMap[char] > max) {
+>      max = charMap[char];
+>      maxChar = char;
+>    }
+>  }
+>  return maxChar;
+>}
+>```
+>
+>
+> **Notes**:
+>- Article on [How to add a key-value pair to javascript object](https://stackoverflow.com/questions/1168807/how-can-i-add-a-key-value-pair-to-a-javascript-object)
+>- [MDN docs on for...in loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
+>
