@@ -244,3 +244,54 @@ Fizzbuzz
 >*Notes*:
 >- **fizzbuzz** is a good example of when a basic ```for``` loop is an appropriate choice.
 >
+
+Chunk
+-------------
+> **Directions**
+>*Given an array and chunk size, divide the array into many subarrays where each subarray is of length size.*
+>
+> **Example Output**:
+>```
+>// chunk([1, 2, 3, 4], 2) --> [[ 1, 2], [3, 4]]
+>// chunk([1, 2, 3, 4, 5], 2) --> [[ 1, 2], [3, 4], [5]]
+>// chunk([1, 2, 3, 4, 5, 6, 7, 8], 3) --> [[ 1, 2, 3], [4, 5, 6], [7, 8]]
+>// chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
+>// chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
+>```
+>
+>**How to breakdown this problem?**:
+>
+>*Method 1: iterate & use the last array for logic*
+>- Create empty ```array``` to hold ```chunks``` named ```chunked```.
+>- ```loop``` through the passed in ```array```.
+>- Cache a ```variable``` named ```last``` which hold be the last ```element``` in the ```chunked``` ```array```. *NOTE: That ```last``` is an ```array```.
+>- **if** last element does not exist, ```or``` the ```length``` of the ```last``` ```array``` is equal to chunk ```size```, **then** ```push``` a new ```array``` into the ```chunked``` ```array``` containing the current element.
+>- **else** add the current element into the chunk.
+>
+>*Example Code*:
+>```
+>function chunk(array, size) {
+>
+>  let chunked = [];
+>
+>  for(let item of array) {
+>
+>    const last = chunked[chunked.length -1];
+>
+>    if(!last || last.length === size) {
+>
+>      chunked.push([item])
+>
+>    } else {
+>
+>      last.push(item);
+>    }
+>
+>  }
+>
+>  return chunked;
+>}
+>
+>```
+>
+>
