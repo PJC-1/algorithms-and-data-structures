@@ -294,4 +294,31 @@ Chunk
 >
 >```
 >
+>*Method 2: use of slice()*
+>- Create empty ```chunked``` ```array```.
+>- Create ```index``` start at ```0```.
+>- ```while``` ```index``` is ```less``` than ```array.length```.
+>- **then** ```push``` a ```slice``` of ```legnth``` ```size``` from ```array``` into ```chunked```.
+>- ```add``` ```size``` to ```index```.
+>
+>
+>*Example Code*:
+>```
+>function chunk(array, size) {
+>  const chunked = [];
+>  let index = 0;
+>
+>  while (index < array.length) {
+>    chunked.push(array.slice(index, index + size));
+>    index += size;
+>  }
+>
+>  return chunked;
+>}
+>```
+>
+>*Notes*:
+>- [MDN docs on .slice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+>- [MDN docs on while](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while)
+>
 >
