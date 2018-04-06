@@ -321,4 +321,37 @@ Chunk
 >- [MDN docs on .slice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
 >- [MDN docs on while](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while)
 >
+
+Anagrams
+-------------
+> **Directions**
+>*Check to see if two provided strings are anagrams of each other. One string is an anagram of another if it uses the same characters in the same quantity. Only consider characters, not spaces or punctuation. Consider capital letters to be the same as lower case.*
+>
+> **Example Output**:
+>```
+>//   anagrams('rail safety', 'fairy tales') --> True
+>//   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
+>//   anagrams('Hi there', 'Bye there') --> False
+>```
+>
+>*Notes*:
+>- [MDN Docs on Regular Expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+>- [MDN Docs on String.prototype.replace()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
+>The **`replace()`** method returns a new string with some or all matches of a `pattern` replaced by a `replacement`. The `pattern` can be a string or a [`RegExp`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp "The RegExp constructor creates a regular expression object for matching text with a pattern."), and the `replacement` can be a string or a function to be called for each match.
+>- ```\w``` flag in **regular expressions** Matches any alphanumeric character from the basic Latin alphabet, including the underscore. Equivalent to ```[A-Za-z0-9_]```.
+>For example, ```/\w/``` matches "a" in "apple", "5" in "$5.28", and "3" in "3D".
+>- ```g``` flag means global match; find all matches rather than stopping after the first match.
+>- ```^``` Matches beginning of input. If the multiline flag is set to true, also matches immediately after a line break character.
+For example,  `/^A/`  does not match the "A" in "an A", but does match the first "A" in "An A".
+>- The ```.replace()``` and ```.toLowerCase()``` methods will be very helpful when dealing with ```string``` problems.
+>*Example:*
+>```
+>// code snippet
+>const word = "HI THERE!!!!!";
+>
+>word.replace(/[^\w]/g, "").toLowerCase();
+>
+>// => 'hithere'
+>```
+>
 >
