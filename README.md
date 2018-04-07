@@ -343,15 +343,17 @@ Anagrams
 >- ```g``` flag means global match; find all matches rather than stopping after the first match.
 >- ```^``` Matches beginning of input. If the multiline flag is set to true, also matches immediately after a line break character.
 For example,  `/^A/`  does not match the "A" in "an A", but does match the first "A" in "An A".
+>- ```[^a-c]``` A negated or complemented character set. That is, it matches anything that is not enclosed in the brackets. You can specify a range of characters by using a hyphen, but if the hyphen appears as the first or last character enclosed in the square brackets it is taken as a literal hyphen to be included in the character set as a normal character.
+For example,  `[^abc]`  is the same as  `[^a-c]`. They initially match "o" in "bacon" and "h" in "chop".
 >- The ```.replace()``` and ```.toLowerCase()``` methods will be very helpful when dealing with ```string``` problems.
 >*Example:*
 >```
 >// code snippet
->const word = "HI THERE!!!!!";
 >
+>const word = "HI THERE!!!!!";
 >word.replace(/[^\w]/g, "").toLowerCase();
 >
->// => 'hithere'
+>// output => 'hithere'
 >```
 >
 >
