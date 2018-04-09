@@ -356,4 +356,55 @@ For example,  `[^abc]`  is the same as  `[^a-c]`. They initially match "o" in "b
 >// output => 'hithere'
 >```
 >
+>*Method 1 Example*:
+>```
+>function anagrams(stringA, stringB) {
+>  const aCharMap = buildCharMap(stringA);
+>  const bCharMap = buildCharMap(stringB);
+>
+>  if(Object.keys(aCharMap).length !== Object.keys(bCharMap).length) {
+>    return false;
+>  }
+>
+>  for(let char in aCharMap) {
+>    if(aCharMap[char] !== bCharMap[char]) {
+>      return false;
+>    }
+>  }
+>  return true;
+>}
+>
+>function buildCharMap(str) {
+>  const charMap = {};
+>  for(let char of str.replace(/[^\w]/g, "").toLowerCase()) {
+>    charMap[char] = charMap[char] + 1 || 1;
+>  }
+>
+>  return charMap;
+>}
+>
+>```
+>
+>*Method 2: use of Sort()*
+>- Create a helper function that will format a passed in ```string```.
+>- Use ```replace(/[^\w]/g, '')``` to remove any spaces or special characters.
+>- Use ```toLowerCase()``` to convert all characters to lower case.
+>- Use ```split("")``` to convert the ```string``` into an ```array```.
+>- Use ```sort()``` to sort the ```elements``` in the ```array```.
+>- Once the ```elements``` in the ```array``` are sorted, use ```join("")``` to convert the ```array``` back to a ```string```.
+>- Now that the helper function is complete, we can consider the main ```anagrams``` function. The ```anagrams``` function takes ```2``` ```strings```.
+>- Create ```2``` new ```variables``` set to the helper function to format the passed in ```strings```.
+>- Then ```return``` an ```expression``` of the new ```strings``` ```compared``` to each other, which will ```return``` a ```boolean``` value.
+>
+>*Method 2 Example*
+>```
+>function anagrams(stringA, stringB) {
+>  return cleanString(stringA) === cleanString(stringB);
+>}
+>
+>function cleanString(str) {
+>  return str.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('');
+>}
+>
+>```
 >
