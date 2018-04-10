@@ -408,3 +408,38 @@ For example,  `[^abc]`  is the same as  `[^a-c]`. They initially match "o" in "b
 >
 >```
 >
+
+Capitalize
+-------------
+> **Directions**
+>*Write a function that accepts a string. The function should capitalize the first letter of each word in the string then return the capitalized string.*
+>
+> **Example Output**:
+>```
+>//   capitalize('a short sentence') --> 'A Short Sentence'
+>//   capitalize('a lazy fox') --> 'A Lazy Fox'
+>//   capitalize('look, it is working!') --> 'Look, It Is Working!'
+>```
+>
+>*Method 1: split(), map(), slice(), and toUpperCase()*
+>- Use ```split(" ")``` on the passed in ```string```, be sure to ```split``` by a ```1``` ```space```. This will ```create``` an ```array``` where each ```element``` is ```1``` ```word``` in the ```string```.
+>- Use ```map()``` *array helper* to iterate over the newly converted ```array```.
+>- For every iteration:
+> Use the ```bracket-notation``` to access the first position of the ```string``` (example: ```element[0]```). Then chain the ```toUpperCase()``` method, to convert the leading letter of the word to capitalized.
+> Use the ```slice()``` method to return the entire word, except for the first letter (example: ```element.slice(1)```.
+> ```return``` from the ```map``` function the *capitalized first letter* ```concatenated``` with the *rest of the word starting from the ```1st``` position*.
+> Once the ```map``` function is complete, convert the ```array``` back to a ```string``` using ```join```. Remember to re```join``` the ```array``` separated by ```1``` ```space``` so that each ```element``` will be a single ```word``` in the ```string```.
+> Don't forget to ```return``` this ```string```.
+>
+> *Method 1 Example Code*:
+> ```
+> function capitalize(str) {
+>  const arr = str.split(' ').map(element => {
+>    const firstLetter = element[0].toUpperCase();
+>    const restOfWord = element.slice(1);
+>    return firstLetter + restOfWord;
+>  });
+>  return arr.join(' ');
+>}
+> ```
+>
