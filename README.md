@@ -443,3 +443,28 @@ Capitalize
 >}
 > ```
 >
+>*Method 2: Add to a new string after checking if the next character is a space*:
+>- Create an empty ```string``` called ```result```.
+>- ```iterate``` through the passed in ```string```
+> **for each** ```character``` in the ```string```.
+> **if** the ```character``` to the left is a ```space```, ```capitalize``` it and ```add``` it to the ```result```.
+> **else**, only ```add``` it to the ```result```.
+>One *gotcha* is ```capitalizing``` the first ```letter```. One way to resolve this is to create the ```result``` variable with the first ```letter``` of the passed in ```string``` ```capitalized```.
+>
+>*Method 2 Example Code*:
+>```
+>function capitalize(str) {
+>  let result = str[0].toUpperCase();
+>
+>  for(let i = 1; i < str.length; i++) {
+>    if(str[i - 1] === ' ') {
+>      result += str[i].toUpperCase();
+>    } else {
+>      result += str[i];
+>    }
+>  }
+>
+>  return result;
+>}
+>```
+>
