@@ -449,7 +449,7 @@ Capitalize
 > **for each** ```character``` in the ```string```.
 > **if** the ```character``` to the left is a ```space```, ```capitalize``` it and ```add``` it to the ```result```.
 > **else**, only ```add``` it to the ```result```.
->One *gotcha* is ```capitalizing``` the first ```letter```. One way to resolve this is to create the ```result``` variable with the first ```letter``` of the passed in ```string``` ```capitalized```.
+>- One *gotcha* is ```capitalizing``` the first ```letter```. One way to resolve this is to create the ```result``` variable with the first ```letter``` of the passed in ```string``` ```capitalized```.
 >
 >*Method 2 Example Code*:
 >```
@@ -468,3 +468,54 @@ Capitalize
 >}
 >```
 >
+
+
+Steps
+-------------
+> **Directions**
+>*Write a function that accepts a positive number N. The function should console log a step shape with N levels using the # character. Make sure the step has spaces on the right hand side!*
+>
+> **Example Output**:
+>```
+>// --- Examples
+>//   steps(2)
+>//       '# '
+>//       '##'
+>//   steps(3)
+>//       '#  '
+>//       '## '
+>//       '###'
+>//   steps(4)
+>//       '#   '
+>//       '##  '
+>//       '### '
+>//       '####'
+>```
+>
+>* Method 1: Iterate through rows and columns*
+>- ```iterate``` through ```rows``` *from* ```0``` to ```n```.
+> ```create``` an ```empty``` ```string``` named ```stair```.
+>- ```iterate``` through ```columns``` *from* ```0``` to ```n```.
+> **if** the ```current``` ```column``` is ```equal``` to or ```less``` than the ```current``` ```row```.
+> ```add``` a ```#``` to ```stair```.
+> **else** ```add``` a ```space``` to ```stair```.
+>- ```console.log``` ```stair```.
+>
+>*Method 1 Example Code*:
+>```
+>function steps(n) {
+>  for(let row = 0; row < n; row++) {
+>    let stair = '';
+>    for(let column = 0; column < n; column++) {
+>      if(column <= row) {
+>        stair += '#';
+>      } else {
+>        stair += ' ';
+>      }
+>    }
+>    console.log(stair);
+>  }
+>}
+>```
+>
+> 
