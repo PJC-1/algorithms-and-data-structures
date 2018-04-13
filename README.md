@@ -518,4 +518,29 @@ Steps
 >}
 >```
 >
+> *Recursion Tips*
+>- Figure out the bare minimum pieces of information to represent your problem.
+>- Give reasonable defaults to the bare minimum pieces of info.
+>- Check the base case. Is there any work left to do? If not, return.
+>
+> *Recursion Example*:
+> ```
+> function printNumber(n) {
+>  if(n === 0) {
+>    return
+>  }
+>  console.log(n);
+>  
+>  printNumber(n -1);
+>}
+>
+>printNumber(10);
+> ```
+>
+>*Method 2: Use of recursion*
+>- **if** ```(row === n)``` **then** we have hit the end of our problem.
+>- **if** the ```stair``` ```string``` has a ```length === n``` **then** we are at the end of a ```row```.
+>- **if** the ```length``` of the ```stair``` ```string``` is less than or equal to the ```row``` number we're working on, we ```add``` a ```#```, otherwise ```add``` a ```space```.
+>
+>
 > 
