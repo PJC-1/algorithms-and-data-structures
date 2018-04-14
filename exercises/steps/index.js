@@ -27,8 +27,8 @@ function steps(n, row = 0, stair = '') {
     return steps(n, row + 1)
   }
 
-  stair.length <= row ? stair += '#' : stair += ' ';
-  steps(n, row, stair);
+  const add = stair.length <= row ? '#' : ' ';
+  steps(n, row, stair + add);
 }
 
 // function steps(n) {

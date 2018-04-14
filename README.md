@@ -542,5 +542,21 @@ Steps
 >- **if** the ```stair``` ```string``` has a ```length === n``` **then** we are at the end of a ```row```.
 >- **if** the ```length``` of the ```stair``` ```string``` is less than or equal to the ```row``` number we're working on, we ```add``` a ```#```, otherwise ```add``` a ```space```.
 >
+>*Method 2 Example Code*:
+>```
+>function steps(n, row = 0, stair = '') {
+>  if(row === n) {
+>    return
+>  }
+>
+>  if(n === stair.length) {
+>    console.log(stair);
+>    return steps(n, row + 1)
+>  }
+>
+>  const add = stair.length <= row ? '#' : ' ';
+>  steps(n, row, stair + add);
+>}
+>```
 >
 > 
