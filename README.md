@@ -559,4 +559,55 @@ Steps
 >}
 >```
 >
-> 
+
+Pyramid
+-------------
+> **Directions**
+>*Write a function that accepts a positive number N. The function should console log a pyramid shape with N levels using the # character. Make sure the pyramid has spaces on both the left *and* right hand sides.*
+>
+> **Example Output**:
+>```
+>//   pyramid(1)
+>//       '#'
+>//   pyramid(2)
+>//       ' # '
+>//       '###'
+>//   pyramid(3)
+>//       '  #  '
+>//       ' ### '
+>//       '#####'
+>```
+>
+> *Method 1: iterative approach*
+>- First, finding the total number of ```columns``` can be found by ```mulitplying``` ```n``` number of ```rows```  by ```2``` and then ```subtracting``` by ```1```. This value can be set to a variable named ```columnTotal```.
+>- Second, it will helpful to also get the middle ```column```, which can be found by using the ```columnTotal``` variable, ```dividing``` it by ```2``` and flooring this value with the help of the ```Math.floor()``` method.
+> The ```Math``` object's ```floor()``` method returns the largest integer less than or equal to a given number.
+>- ```iterate``` through ```row```s, for ```n``` number of ```iterations```.
+>- Inside the ```row```s loop, set a variable named ```level``` to an ```empty``` ```string```, this will be used to hold value that will be logged to represent each ```row```. This is why it needs to be the first operation in the loop, to initialize a new ```string``` for each ```iteration```.
+>- ```iterate``` through ```column```s, for the ```columnTotal``` number of ```iterations```.
+>- In side the ```column```s loop, there needs to exists some ```logic``` to handle ```adding``` a ```#``` or a ```space``` to the ```level``` variable.
+> Looking at the example output for pyramid, you will see that there is a pattern: *From the ```midpoint```, extending outward (in both a negative and positive direction) by the value of ```row``` is occupied by a ```#``` symbol*.
+> So basically, there is a *range* within the ```columns``` that will be marked with a ```#```.
+>- Once we complete ```iterating``` through the ```column```s, we need to ```console.log``` ```level```.
+>
+>*Method 1 Example Code*:
+>```
+>function pyramid(n) {
+>  const columnTotal = 2 * n - 1;
+>  const midpoint = Math.floor(columnTotal/2);
+>
+>  for(let row = 0; row < n; row++) {
+>    let level = '';
+>    for(let column = 0; column < columnTotal; column++) {
+>      if(column >= midpoint - row && column <= midpoint + row) {
+>        level += '#';
+>      } else {
+>        level += ' ';
+>      }
+>    }
+>    console.log(level);
+>  }
+>}
+>```
+>
+>
