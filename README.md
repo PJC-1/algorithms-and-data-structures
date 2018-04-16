@@ -611,3 +611,39 @@ Pyramid
 >```
 >
 >
+
+Vowels
+-------------
+> **Directions**
+>*Write a function that returns the number of vowels used in a string. Vowels are the characters 'a', 'e', 'i', 'o', and 'u'. Also note that the function should return the number of vowels even when they are capitalized.*
+>
+> **Example Output**:
+>```
+>//   vowels('Hi There!') --> 3
+>//   vowels('Why do you ask?') --> 4
+>//   vowels('Why?') --> 0
+>```
+>
+>*Method 1: Iterate through string and use includes Array method.*
+>- Set a ```counter``` variable which will be used to ```return``` the number ```vowels``` used in the passed in ```string```.
+>- Next, set a variable named ```checker``` that will be an ```array``` containing the ```vowel``` characters. This will be used to check the characters in the passed in ```string``` against.
+>- ```iterate``` through the passed in ```string```, to accommodate for the *edge-case* where *the function should return the number of vowels even when characters are capitalized*, the ```toLowerCase()``` string method can be used. For every ```character``` in the ```string```, we need some logic to check if the current ```character``` is ```included``` in the ```checker``` array of ```vowels```.
+>- ```if``` the ```charater``` is included in the ```checker``` array, ```then``` ```increment``` the ```counter``` variable by ```1```.
+>- Finally, ```return``` ```counter```.
+>
+>*Method 1 Example Code*:
+>```
+>function vowels(str) {
+>  let counter = 0;
+>  const checker = ['a', 'e', 'i', 'o', 'u'];
+>
+>  for(let char of str.toLowerCase()) {
+>    if(checker.includes(char)) {
+>      counter++
+>    }
+>  }
+>  return counter;
+>}
+>```
+>
+>
