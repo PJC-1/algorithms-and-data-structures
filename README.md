@@ -646,4 +646,25 @@ Vowels
 >}
 >```
 >
+>*Method 2: use of match() and RegExp*
+>- Create a variable named ```matches``` that is set to an expressions that uses the ```match()``` string method on the passed in ```string``` to obtain matches that are ```vowels```.
+>The ```match()``` method takes a ```regular expression```, in this case we will use the ```RegExp``` ```/[aeiou]/gi``` to match the ```vowels``` enclosed by the square brackets.
+>The ```g``` flag is used to check **global**, or all occurrences of matches.
+>The ```i``` flag is used to ensure the match is **case-insensitive**.
+>- ```return``` a ```ternary``` expression that has a condition of ```matches```, where **if** ```maches``` is a *truthy* value (i.e. contains some values in the ```array```) ```matches.length``` is ```returned```
+>**else** if ```matches``` is a *falsey* value, then ```return``` ```0```.
+>
+>*Notes*:
+>- The ```match()``` method retrieves when matching a *string* against a *regular expression*.
+> If the string matches the expression, it will return an ```Array``` containing the entire matched string as the first element, followed by any results captured in parentheses. If there were no matches, ```null``` is returned.
+> If the *regular expression* does not include the ```g``` flag, ```str.match()``` will return the same result as ```RegExp.exec()```. The returned ```Array``` has an extra ```input``` property, which contains the original string that was parsed. In addition, it has an ```index``` property, which represents the zero-based index of the match in the string.
+>
+>*Method 2 Example Code*:
+>```
+>function vowels(str) {
+>  const matches = str.match(/[aeiou]/gi);
+>  return matches ? matches.length : 0;
+>}
+>```
+>
 >
