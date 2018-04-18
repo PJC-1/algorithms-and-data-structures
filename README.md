@@ -668,3 +668,45 @@ Vowels
 >```
 >
 >
+
+Matrix
+-------------
+> **Directions**
+>*Write a function that accepts an integer N and returns an NxN spiral matrix*
+>
+> **Example Output**:
+>```
+>//   matrix(2)
+>//     [[1, 2],
+>//     [4, 3]]
+>//   matrix(3)
+>//     [[1, 2, 3],
+>//     [8, 9, 4],
+>//     [7, 6, 5]]
+>//  matrix(4)
+>//     [[1,   2,  3, 4],
+>//     [12, 13, 14, 5],
+>//     [11, 16, 15, 6],
+>//     [10,  9,  8, 7]]
+>```
+>
+>*Notes*:
+>
+>
+>*Method 1*:
+>- **Create** ```empty``` ```array``` of ```arrays``` called ```results```.
+>**Create** the following variables: ```start column```, ```end column```, ```start row```, and ```end row```.
+> The ```start row``` and ```start column``` will always be **initialized** at ```0```.
+> While, the ```end row``` and ```end column``` will depend on ```n``` passed into the *function*, ```n - 1```.
+>- **Create** a ```counter``` variable, starting at ```1```.
+>- As long as ```(start column <= end column)```  **AND** ```start row <= end row)```
+> **Loop** from ```start column``` to ```end column```
+> At ```result[start_row][i]``` **assign** ```counter``` variable.
+> **Increment** ```counter```.
+> **Increment** ```start row```.
+> **Loop** from ```start row``` to ```end row```.
+> At ```result[i][end_column]``` **assign** ```counter``` variable.
+> **Increment** ```counter```.
+> **Decrement** ```end column```.
+> ...*repeat* for other **two sides**.
+>
