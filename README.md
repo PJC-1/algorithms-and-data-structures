@@ -691,22 +691,24 @@ Matrix
 >```
 >
 >*Notes*:
->
+>- Inside the ```while``` loop, each ```for``` loop will be responsible for building a different side of the *matrix*.
 >
 >*Method 1*:
 >- **Create** ```empty``` ```array``` of ```arrays``` called ```results```.
->**Create** the following variables: ```start column```, ```end column```, ```start row```, and ```end row```.
-> The ```start row``` and ```start column``` will always be **initialized** at ```0```.
-> While, the ```end row``` and ```end column``` will depend on ```n``` passed into the *function*, ```n - 1```.
 >- **Create** a ```counter``` variable, starting at ```1```.
->- As long as ```(start column <= end column)```  **AND** ```start row <= end row)```
-> **Loop** from ```start column``` to ```end column```
-> At ```result[start_row][i]``` **assign** ```counter``` variable.
-> **Increment** ```counter```.
-> **Increment** ```start row```.
-> **Loop** from ```start row``` to ```end row```.
-> At ```result[i][end_column]``` **assign** ```counter``` variable.
-> **Increment** ```counter```.
-> **Decrement** ```end column```.
+>- **Create** the following variables: ```start column```, ```end column```, ```start row```, and ```end row```.
+>- The ```start row``` and ```start column``` will always be **initialized** at ```0```.
+>- In contrast, the ```end row``` and ```end column``` variables will depend on the value of ```n``` passed into the *function*, specifically ```n - 1```.
+>- We want to use a ```while``` loop that will run the code as long as ```(start column <= end column)```  **AND** ```start row <= end row)```.
+>- To *build* the **top row** of the *matrix*, **Loop** from ```start column``` to ```end column```.
+>- We want to set the values of the ```array```, at ```result[start_row][i]``` **assign** the ```counter``` variable.
+>- Then **Increment** ```counter```.
+>- After the ```for``` loop that builds the *top row*, it is important to **Increment** ```start row```. This will move the ```startRow``` to the *next* row.
+>- **Loop** from ```start row``` to ```end row```.
+>- At ```result[i][end_column]``` **assign** ```counter``` variable.
+>- **Increment** ```counter```.
+>- **Decrement** ```end column```.
 > ...*repeat* for other **two sides**.
+>
+>
 >
