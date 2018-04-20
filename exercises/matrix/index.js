@@ -23,34 +23,35 @@ function matrix(n) {
   }
 
   let counter = 1;
-  let startColumn = 0;
-  let endColumn = n - 1;
+
   let startRow = 0;
   let endRow = n - 1;
+  let startColumn = 0;
+  let endColumn = n - 1;
 
   while(startColumn <= endColumn && startRow <= endRow) {
-    //Top row
+    // Top row
     for(let i = startColumn; i <= endColumn; i++) {
       results[startRow][i] = counter;
       counter++;
     }
     startRow++;
 
-    // Right column
+    // Right side
     for(let i = startRow; i <= endRow; i++) {
       results[i][endColumn] = counter;
       counter++;
     }
     endColumn--;
 
-    //Bottom row
+    // Bottom row
     for(let i = endColumn; i >= startColumn; i--) {
       results[endRow][i] = counter;
       counter++;
     }
     endRow--;
 
-    // start column
+    // Left side
     for(let i = endRow; i >= startRow; i--) {
       results[i][startColumn] = counter;
       counter++;

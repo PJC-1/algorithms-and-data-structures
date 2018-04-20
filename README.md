@@ -690,25 +690,72 @@ Matrix
 >//     [10,  9,  8, 7]]
 >```
 >
->*Notes*:
->- Inside the ```while``` loop, each ```for``` loop will be responsible for building a different side of the *matrix*.
->
 >*Method 1*:
->- **Create** ```empty``` ```array``` of ```arrays``` called ```results```.
->- **Create** a ```counter``` variable, starting at ```1```.
->- **Create** the following variables: ```start column```, ```end column```, ```start row```, and ```end row```.
+>- **Create** ```empty``` ```Array``` used for storing the *arrays* of **rows** called ```results```.
+>- We need to buildout the containg *arrays* (**rows**), we can acheive this by using a ```for-loop``` that will ```push``` an empty ```Array``` into ```results```, ```n``` number of **iterations**.
+>- **Create** a ```counter``` variable, starting at ```1```. This will be used to keep track of the *value* used to **set** the ```current-index``` as we build the matrix.
+>- **Create** the following variables: ```start column```, ```end column```, ```start row```, and ```end row```. These *variables* will be used to keep track of the **start** and **end** of both the **rows** and **columns**.
 >- The ```start row``` and ```start column``` will always be **initialized** at ```0```.
 >- In contrast, the ```end row``` and ```end column``` variables will depend on the value of ```n``` passed into the *function*, specifically ```n - 1```.
->- We want to use a ```while``` loop that will run the code as long as ```(start column <= end column)```  **AND** ```start row <= end row)```.
->- To *build* the **top row** of the *matrix*, **Loop** from ```start column``` to ```end column```.
->- We want to set the values of the ```array```, at ```result[start_row][i]``` **assign** the ```counter``` variable.
+>- We want to use a ```while-loop``` that will run the code as long as the following *condition* evaluates to **true**: ```(start column <= end column)```  **AND** ```(start row <= end row)```.
+>- Essentially what is happening in this algorithm is the *matrix* is being build from the *outside-in*, so what happens is as the *while-loop* progresses the ```startRow``` and ```startColumn``` will be **incremented**, while the ```endRow``` and ```endColumn``` are consistently **decremented**.
+>- Eventually, there will be a time when the ```startRow``` will be ```5``` and the ```endRow``` will be ```4```, once the *while-loop* finishes it will not enter the *loop* since the *while-loop's* **condition** *evaluates* to **false**.
+>- To *build* the **top row** of the *matrix*, we need to be **at** the ```startRow``` and **increment** from ```start column``` to ```end column```.
+>- Inside the **top row** ```for-loop``` we need to **set** the *values* of the  ```current-index```, at the ```startRow``` to ```counter```.
 >- Then **Increment** ```counter```.
->- After the ```for``` loop that builds the *top row*, it is important to **Increment** ```start row```. This will move the ```startRow``` to the *next* row.
+>- Now that we have completed building the **tow row**, **increment** ```startRow``` (This is where we start to see the **"Building the matrix from the outside-in..."**).
 >- **Loop** from ```start row``` to ```end row```.
 >- At ```result[i][end_column]``` **assign** ```counter``` variable.
 >- **Increment** ```counter```.
 >- **Decrement** ```end column```.
 > ...*repeat* for other **two sides**.
 >
+>*Method 1 Example Code*:
+>```
+>function matrix(n) {
+>  const results = [];
 >
+>  for(let i = 0; i < n; i++) {
+>    results.push([]);
+>  }
+>
+>  let counter = 1;
+>
+>  let startRow = 0;
+>  let endRow = n - 1;
+>  let startColumn = 0;
+>  let endColumn = n - 1;
+>
+>  while(startColumn <= endColumn && startRow <= endRow) {
+>    // Top row
+>    for(let i = startColumn; i <= endColumn; i++) {
+>      results[startRow][i] = counter;
+>      counter++;
+>    }
+>    startRow++;
+>
+>    // Right side
+>    for(let i = startRow; i <= endRow; i++) {
+>      results[i][endColumn] = counter;
+>      counter++;
+>    }
+>    endColumn--;
+>
+>    // Bottom row
+>    for(let i = endColumn; i >= startColumn; i--) {
+>      results[endRow][i] = counter;
+>      counter++;
+>    }
+>    endRow--;
+>
+>    // Left side
+>    for(let i = endRow; i >= startRow; i--) {
+>      results[i][startColumn] = counter;
+>      counter++;
+>    }
+>    startColumn++;
+>  }
+>  return results;
+>}
+>```
 >
