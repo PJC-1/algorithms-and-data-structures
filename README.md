@@ -783,4 +783,31 @@ Runtime Complexity
 >- Because we basically have a situation, where each additional character would amount to ```1``` step of extra work, this would be considered a **linear** runtime, or *'N'*.
 >- A **linear** runtime means that the relationship between additional inputs and work it takes to process is **1:1**.
 >
- 
+>
+
+>
+>Revisiting the **Steps** problem, looking at the solution with ```for-loops```.
+>
+>**Code*:
+>```
+>function steps(n) {
+>  for(let row = 0; row < n; row++) {
+>    let stair = '';
+>    for(let column = 0; column < n; column++) {
+>      if(column <= row) {
+>        stair += '#';
+>      } else {
+>        stair += ' ';
+>      }
+>    }
+>    console.log(stair);
+>  }
+>}
+>```
+>
+>- We take the *input* ```n``` and based on this *input* we had ```2``` *nested* ```for-loops```.
+>- In this case, when ```n``` was increased by ```1```, we had to do a *significant* amount of work.
+>- An example of this is when the *input* ```n``` was equal to ```2```, we ended up having to print ```3``` *hash-symbols* and ```1``` *space*.
+>- This would be considered an ```N^2``` or **quadratic runtime**.
+>-
+>
