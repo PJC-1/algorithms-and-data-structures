@@ -759,3 +759,28 @@ Matrix
 >}
 >```
 >
+
+Runtime Complexity
+-------------
+>**Describes the performance of an algorithm.**
+>
+> *How much more processing power/time is required to run your algorithm if we double the inputs?*
+>
+>Revisiting the **String Reverse** problem, specifically the *iterative solution*.
+>**Code**:
+>```
+>function reverse(str) {
+>  let reversed = '';
+>  for (character of str) {
+>    reversed = character + reversed;
+>  }
+>  return reversed;
+>}
+>```
+>
+>- In the solution, we take the passed in *string* argument and iterated over each character of the *string* one time.
+>- So as we start to add ```1``` additional character to the *string* argument, this would result in ```1``` additional *step* of **work**.
+>- Because we basically have a situation, where each additional character would amount to ```1``` step of extra work, this would be considered a **linear** runtime, or *'N'*.
+>- A **linear** runtime means that the relationship between additional inputs and work it takes to process is **1:1**.
+>
+ 
