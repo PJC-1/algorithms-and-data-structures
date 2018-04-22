@@ -838,3 +838,40 @@ Different Types of Runtime Complexity
 >```2^n```
 >*If you add a 'single' element to a collection, the processing power required doubles*
 >
+
+Big 'O' Notation
+-------------
+>```O(n)``` -> **Linear**
+>
+>```O(1)``` -> **Constant**
+>
+>```O(n^2)``` -> **Quadratic**
+>
+>*What is the runtime complexity of your solution?*
+>*What is the big 'O' of your solution?*
+>**Both** questions are asking what is the efficiency of your solution. What is the runtime of your algorithm.
+>
+>**Big 'O' Notation** is a way of writing out this *runtime complexity* that is commonly seen in the academic world.
+>
+>For example, **linear runtime** could be indicated by writing **O(n)**, *O of n*.
+>
+
+Identifying Runtime Complexity
+-------------
+>- *Iterating with a simple for loop through a single collection?* -> Probably **O(n)**
+>- *Iterating through half a collection?* -> Still **O(n)**. There are no constants in runtime.
+>- *Iterating through two different collections with separate for loops?* -> **O(n + m)**
+>- *Two nested for loops iterating over the same collection?* -> **O(n^2)**
+>- *Tow nested for loops iterating over different collections* -> **O(n*m)**
+>- *Sorting?* -> **O(n*log(n)**
+>
+
+
+Space Complexity
+-------------
+>**Runtime Complexity** is a reference to the performance of an algorithm, in terms of *processing power*. Another aspect of an algorithm is the **Space Complexity**, is a reference to **RAM/memory** or *space* an algorithm needs to complete a given task.
+>
+>In general you can apply a lot of the same rules around *runtime complexity* to *space complexity*.
+>An example of this, is in the **String Reverse** problem. In that case for every additional character that we added into our input set we had one additional character that we needed to return in the output set of data.
+>So the amount of *memory* that we spent was linear because for every one additional character we needed one additional element in our *string* to be added.
+>
