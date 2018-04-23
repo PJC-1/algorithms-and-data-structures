@@ -792,6 +792,28 @@ Fibonacci
 >}
 >```
 >
+>*Method 1 Runtime Complexity*
+>- As ```n``` increase by ```1``` we need to do ```1``` more additional calculation or **Linear Runtime**.
+>
+>*Method 2: Using Recursion*
+>- The *base-case* is **if** ```n``` is *less* than ```2```, **then** **return** ```n```.
+>- ```fib(0)``` -> ```0```
+>- ```fib(1)``` -> ```1```
+>- *Until* *base-case's* condition is satisfied we **return** the ```sum``` of calling ```fib(n - 1)``` and ```fib(n - 2)```.
+>- *Essentially*, what is happening is ```fib()``` will be called recursively, **until** all ```fib()``` function calls have **returned** ```0``` or ```1```. And then all the ```1```s and ```0```s are **added** to make up the ```return``` value.
+>- The ```returned``` value is the value of the ```n```th **element** in the *fibonacci series*.
+>
+>*Method 2 Example Code*
+>```
+>function fib(n) {
+> if(n < 2) {
+>   return n;
+> }
+>
+> return fib(n - 1) + fib(n - 2);
+>}
+>```
+>
 
 Runtime Complexity
 -------------
