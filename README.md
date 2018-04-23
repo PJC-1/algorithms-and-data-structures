@@ -814,6 +814,20 @@ Fibonacci
 >}
 >```
 >
+>*Method 2 Runtime Complexity*
+>- We see that if we call ```fib(5)```, we get a total of ```15``` times the ```fib()``` function gets invoked.
+>- We also see that if we call ```fib(6)```, we get a total of ```25``` times the ```fib()``` function is invoked.
+>- This indicates that the **recursive** solution has an **exponential runtime** (```2^n```).
+>- So for each *additional* ```element``` that we add into our *collection* or for each **increment** of the value ```n``` to our *function* we are experiencing a *dramatic* increase in the number of function calls that are required.
+>- *Note*, that any time we start seeing an exponential runtime function it usually means that there is a different solution we can put together that might be much more *efficient* in nature.
+>- If, your interviewer asks to *refactor* the recursive solution to improve the runtime of this algorithm, they are looking for you to say something very particular.
+>- If we take a look at a *tree* of the ```fib()``` function calls, we would see the ```fib()``` function being called multiple times with **identical arguments**.
+>- So, if there is some way that we could *avoid* all these extra function calls, then if we call ```fib(6)``` we would really only have to worry about doing all the computation stuff for: ```fib(5)```, ```fib(4)```, ```fib(3)```, ```fib(2)```,  ```fib(1)```, and ```fib(0)``` exactly **one** time and then all other times we could figure out some clever solution to reuse the the previously evaluated ```fib()``` function calls.
+>- *Specifically*, your interviewer will want to hear about **Memoization**.
+>- **Memoization**: Store the arguments of each function call allong with the result. If the function is called again with the *same arguments*, **return** the precomputed result, rather than running the function again.
+>- So we have got some *table* in **memory** that will tell us our function was called with a specific number and when it was **run** it **returned** this result.
+>- By doing this *memoization* process or by *caching* all the *results* that come out of the function we can dramatically improve the run speed of this function.
+>- *Note*: There are many other interview questions or algorithmic questions that can be answered through this same *memoization* process.
 
 Runtime Complexity
 -------------
