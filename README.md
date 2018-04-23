@@ -760,6 +760,39 @@ Matrix
 >```
 >
 
+Fibonacci
+-------------
+> **Directions**
+>*Print out the n-th entry in the fibonacci series. The fibonacci series is an ordering of numbers where each number is the sum of the preceeding two. For example, the ```[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]``` forms the first ten entries of the fibonacci series.*
+>
+> **Example Output**:
+>```
+> fib(4) === 3
+>```
+>
+>*Method 1: Iterative Solution*
+>- Create a ```results``` **array** that contains the first ```2``` entries of the *fibonacci* series, ```0``` and ```1```. We can *hard-code* these values because these will *never* change and always begin the sequence.
+>- Use a ```for-loop``` to **iterate** until the passed in value ```n``` *starting* from ```2```, which is the first *element* after the first two entries we initially added to the ```results``` **array**.
+>- Because each number in the *fibonacci series* is the ```sum``` of the *preceeding* two numbers, inside the ```for-loop``` we need to create *two* variables that are set to the value of the last *two* **elements** in the ```results``` **array**.
+>- **Add** these two variables and **push** that value into the ```results``` **array**.
+>Outside of the ```for-loop``` **return** the value of the ```nth``` entry in the ```results``` **array**.
+>
+>*Method 1 Example Code*:
+>```
+>function fib(n) {
+>  let results = [0,1];
+>
+>  for(let i = 2; i <= n; i++) {
+>    const a = results[i - 1];
+>    const b = results[i - 2];
+>    results.push(a + b);
+>  }
+>
+>  return results[n];
+>}
+>```
+>
+
 Runtime Complexity
 -------------
 >**Describes the performance of an algorithm.**
