@@ -828,6 +828,45 @@ Fibonacci
 >- So we have got some *table* in **memory** that will tell us our function was called with a specific number and when it was **run** it **returned** this result.
 >- By doing this *memoization* process or by *caching* all the *results* that come out of the function we can dramatically improve the run speed of this function.
 >- *Note*: There are many other interview questions or algorithmic questions that can be answered through this same *memoization* process.
+>
+>*Memoized solution*:
+>```
+>function memoize(fn) {
+>  const cache = {};
+>  return function(...args) {
+>    if(cache[args]) {
+>      return cache[args];
+>    }
+>
+>    const result = fn.apply(this, args);
+>    cache[args] = result;
+>
+>    return result;
+>  };
+>}
+>
+>function slowFib(n) {
+> if(n < 2) {
+>   return n;
+> }
+>
+> return fib(n - 1) + fib(n - 2);
+>}
+>
+>const fib = memoize(slowFib);
+>```
+>
+>*Memoized Solution Notes*:
+>- Basically, we want to build a function ```memoize``` that will take a ```function``` as an ```argument```.
+>- **Create** a *variable* ```cache``` that is an *empty* ```object```, this will be used as storage to hold the ```arguments``` being called on the ```fib()``` function and the *result* of running that ```argument``` with ```fib()```.
+>- The ```memoize``` function will **return** an *anonymous* ```function```.
+>- In order to ensure that this ```function``` will be able to take any number of ```arguments``` we will use the [**spread operator**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) with ```args``` to say that we will take **all** arguments and return an ```array``` contain all of the ```arguments```.
+>- Use some *logic* to check **if** the ```cache``` object contains a key matching ```args```, **then** ```return``` the value of ```cache[args]```.
+>- **if** ```args``` doesn't exists in the ```cache``` object, which means we haven't seen it yet. **Then** call the ```function``` with ```args``` and *save* the result into a ```variable``` named ```result```.
+>- *Next*, set the *unseen* ```args``` and it's ```result``` as a new entry in the ```cache``` object.
+>- *Lastly*, ```return``` ```result```.
+>- [MDN documentation on  Function.prototype.apply()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
+>
 
 Runtime Complexity
 -------------
