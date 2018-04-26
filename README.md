@@ -983,3 +983,35 @@ Space Complexity
 >An example of this, is in the **String Reverse** problem. In that case for every additional character that we added into our input set we had one additional character that we needed to return in the output set of data.
 >So the amount of *memory* that we spent was linear because for every one additional character we needed one additional element in our *string* to be added.
 >
+
+Data Structures
+-------------
+>
+>In an interview setting when being asked about **Data Structures**, they are essentially asking you about:
+>- *Ways of organizing information with optimal 'runtime complexity' for adding, editing, or removing records.*
+>- *Javascript natively implements several data structures*. You will still be asked about **inferior** data structures.
+>
+
+Queue
+-------------
+>A **queue**  is a type of container, that holds **records** or *pieces of data* enter on one end of this container and exit on the other end.
+>
+>One way to think of a **queue**, is seeing the **queue** as **line** to a **ticketing counter** where the **people** waiting in line are the **records** or *pieces of data*.
+>
+>The order of which a **record** enters the **queue**, will dictate the order of which the **record** exits the **queue**.
+>
+> **Adding** a **record** to a **queue**  is also known as **enqueing**.
+>
+> **Removing** a **record** to a **queue** is also known as **dequeuing**.
+>
+>**First In First Out** (*F-I-F-O*)
+>The **first** **record** *enqueued* will be the first **record** *dequeued*.
+>
+>In *javaScript*, when we want to implement a **queue**. Usually what we end up doing is taking an **array** and then *restrict* the methods that can be used to interact with that **array**.
+>
+>A **javascript** array **adding** an *item* to the very front of an array we use ```array.unshift()```. Which will be used to **add a record to the queue**.
+>
+>In order to **remove** an *item* from the end of the array we can use **javascript** ```array.pop()```. Which will be used to **remove a record from the queue**.
+>
+>One way making a **queue** would be to make a **queue** ```class``` in **ES 2015*. Inside this ```class``` we can *initialize* an **array** and only *expose* the ```unshift()``` and ```pop``` *methods* outside of the ```class```. Basically, we want to hide access to all the other functionality of the ```Array```.
+>
