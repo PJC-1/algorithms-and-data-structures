@@ -1015,3 +1015,18 @@ Queue
 >
 >One way making a **queue** would be to make a **queue** ```class``` in **ES 2015*. Inside this ```class``` we can *initialize* an **array** and only *expose* the ```unshift()``` and ```pop``` *methods* outside of the ```class```. Basically, we want to hide access to all the other functionality of the ```Array```.
 >
+>**Create a Queue Data Structure in JavaScript**
+>*The queue should be a class with methods 'add' and 'remove'. Adding to the queue should store an element until it is removed*
+>
+>*Examples*
+>```
+>//     const q = new Queue();
+>//     q.add(1);
+>//     q.remove(); // returns 1;
+>```
+>
+>
+>*Notes*
+>- In a ```ES2015``` **class**, if we define a [```constructor()```](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor) inside the **class**, it will be *ran* every time we create a new **instance** of that **class**.
+>
+>
