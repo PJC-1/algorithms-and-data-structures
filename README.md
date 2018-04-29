@@ -1107,3 +1107,21 @@ Weave
 >}
 >```
 >
+
+
+Stack Data Structure
+-------------
+>A **stack data structure** is very similar to a **queue**, there are just a few differences.
+>
+>When we *add* a **record** we call this **pushing** a new record onto a **stack**. And *removing* a record is referred to as **popping** a record from the **stack**.
+>
+>The *biggest* difference between a **stack** and a **queue** are the order in which *items* are **added** and **removed**.
+>With the **queue** we had that acronym **FIFO** (*First In First Out*). With a **stack** we deal with **FILO** (*First In Last Out*).
+>
+>The *implementation* of the **stack** will be very similar to the **queue**, we will have the same *3* **methods**:
+>- ```push```: *Add a record to the stack*
+>- ```pop```: *Remove the "top" record in the stack*
+>- ```peep```: *Return the "top" record without popping it
+>
+>
+>
