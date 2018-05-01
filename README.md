@@ -1121,7 +1121,78 @@ Stack Data Structure
 >The *implementation* of the **stack** will be very similar to the **queue**, we will have the same *3* **methods**:
 >- ```push```: *Add a record to the stack*
 >- ```pop```: *Remove the "top" record in the stack*
->- ```peep```: *Return the "top" record without popping it
+>- ```peek```: *Return the "top" record without popping it
 >
+
+Implement Queue from Stack
+-------------
+> **Directions**
+>*Implement a Queue datastructure using two stacks. DO NOT create an array inside of the 'Queue' class. Queue should implement the methods 'add', 'remove', and 'peek'. Remember that the Queue is ```FIFO``` (First In First Out), while the Stack is ```FILO``` (First In Last Out).*
 >
+> **Example Output**:
+>```
+>//     const q = new Queue();
+>//     q.add(1);
+>//     q.add(2);
+>//     q.peek();  // returns 1
+>//     q.remove(); // returns 1
+>//     q.remove(); // returns 2
+>```
+>
+>*Queue from Stack Code Example*:
+>```
+>class Stack {
+>  constructor() {
+>    this.data = [];
+>  }
+>
+>  push(record) {
+>    this.data.push(record);
+>  }
+>
+>  pop() {
+>    return this.data.pop();
+>  }
+>
+>  peek() {
+>    return this.data[this.data.length - 1];
+>  }
+>}
+>
+>class Queue {
+>  constructor() {
+>    this.first = new Stack();
+>    this.second = new Stack();
+>  }
+>
+>  add(record) {
+>    this.first.push(record);
+>  }
+>
+>  remove() {
+>    while(this.first.peek()) {
+>      const record = this.first.pop();
+>      this.second.push(record);
+>    }
+>    const record = this.second.pop();
+>    while(this.second.peek()) {
+>      const record = this.second.pop();
+>      this.first.push(record);
+>    }
+>    return record;
+>  }
+>
+>  peek() {
+>    while(this.first.peek()) {
+>      this.second.push(this.first.pop());
+>    }
+>    const record = this.second.peek();
+>
+>    while(this.second.peek()) {
+>      this.first.push(this.second.pop());
+>    }
+>    return record;
+>  }
+>}
+>```
 >
