@@ -1196,3 +1196,16 @@ Implement Queue from Stack
 >}
 >```
 >
+
+Linked Lists
+-------------
+>- A **Linked List** is an *ordered* collection of data. Basically, as long as you have some *separate* pieces of *data* and you form some type of *connection* between them, you can refer to that as being a **linked list**.
+>- The *collection* contains a number of different *nodes*. Each *node* contains some amount of *data* along with a *reference* to the next *node*.
+>- When we put a multiple *nodes* together we refer to it as a **Linked List** because it literally a list of linked nodes.
+>- It is also frequently referred to as a **chain** or a *chain of nodes strung together*.
+>- The list of **nodes** that form this chain has an **order** that is *always* maintained. So in other words the order of nodes in a *linked list* won't suddenly or randomly change unless it is explicitly changed.
+>- In every **Linked Lists** there are always two special nodes. The two special nodes that you'll always see are the **head** node, which is always the very first **node**. And the **tail** node, which is the last **node**.
+>- A characteristic of the **tail** node is that it does not have a *reference* to any other **node**.
+>- Every **node** has two parts to it. The first being a sort of *data bucket** assigned to it. The *data* that can be contained in it can be anything we want. The other part of the **node** is a reference to the *next* **node** along the **chain**.
+>- By *convention* we use the names "**data**" and "**next**" for properties of the **node**.
+>
