@@ -1227,3 +1227,63 @@ Linked Lists
 >
 >- The *snippet* above shows 2 *objects* that have a **data** property and a *connection* is made by the **next** property which is used to make a reference to ```nodeTwo```. This can be considered a **linked list** as it full fills the requirements of needing to store some **data** and have a *connection* to another piece of **data**.
 >
+>- The **linked list** only knows about the **head node** (*first node*). If it wants to answer any questions about the *data* of the **linked list** then it needs to **crawl** over the **linked list** and obtain that information.
+>
+>**Implementing Node Class**
+>- *Creates a class instance to represent a node. The node should have two properties, 'data' and 'next'. Accept both of these as arguments to the 'Node' constructor, then assign them to the instance as properties 'data' and 'next'. If 'next' is not provided to the constructor, then default its value to be 'null'.*
+>
+>**Example Use**:
+>```
+>const n = new Node('There');
+>n.data // 'Hi'
+>n.next // null
+>const n2 = new Node('Hi', n);
+>n.next // returns n
+>```
+>
+>**Example Code**:
+>```
+>class Node {
+>  constructor(data, next = null) {
+>    this.data = data;
+>    this.next = next;
+>  }
+>}
+>```
+>
+>**Implementing LinkList Class: constructor**
+>- *Create a class to represent a linked list. When created, a linked list should have *no* head node associated with it. The LinkedList instance will have one property, 'head', which is a reference to the first node of the linked list. By default 'head' should be 'null'.*
+>
+>**Example Use**:
+>```
+>const list = new LinkedList();
+>list.head // null
+>```
+>
+>**Example Code**:
+>```
+>class LinkedList {
+>  constructor() {
+>    this.head = null;
+>  }
+>}
+>```
+>
+>**Implementing LinkList Class: insertFirst Method**
+>- *Creates a new Node from argument 'data' and assigns the resulting node to the 'head' property. Make sure to handle the case in which the linked list already has a node assigned to the 'head' property.*
+>
+>**Example Use**:
+>```
+>const list = new LinkedList();
+>list.insertFirst('Hi There'); // List has one node
+>```
+>
+>**Example Code**:
+>```
+>  insertFirst(data) {
+>    const node = new Node(data);
+>    this.head = node;
+>  }
+>```
+>
+>
