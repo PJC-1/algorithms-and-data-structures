@@ -1209,3 +1209,21 @@ Linked Lists
 >- Every **node** has two parts to it. The first being a sort of *data bucket** assigned to it. The *data* that can be contained in it can be anything we want. The other part of the **node** is a reference to the *next* **node** along the **chain**.
 >- By *convention* we use the names "**data**" and "**next**" for properties of the **node**.
 >
+>**Basic Linked Lists Concept**
+>```
+>const nodeOne = {
+>  data: "sample"
+>};
+>
+>const nodeTwo = {
+>  data: "example"
+>};
+>
+>nodeOne.next = nodeTwo;
+>
+>console.log(nodeOne);
+>// output => { data: 'sample', next: { data: 'example' } }
+>```
+>
+>- The *snippet* above shows 2 *objects* that have a **data** property and a *connection* is made by the **next** property which is used to make a reference to ```nodeTwo```. This can be considered a **linked list** as it full fills the requirements of needing to store some **data** and have a *connection* to another piece of **data**.
+>
