@@ -1286,4 +1286,30 @@ Linked Lists
 >  }
 >```
 >
+>**Implementing LinkList Class: size Method**
+>- *Returns the number of nodes in the linked list.*
+>
+>**Example Use**:
+>```
+>const list = new LinkedList();
+>list.insertFirst('a');
+>list.insertFirst('b');
+>list.insertFirst('c');
+>list.size(); // returns 3
+>```
+>
+>**Example Code**:
+>```
+>  size() {
+>    let counter = 0;
+>    let node = this.head;
+>
+>    while (node) {
+>      counter++;
+>      node = node.next;
+>    }
+>    return counter;
+>  }
+>```
+>
 >
