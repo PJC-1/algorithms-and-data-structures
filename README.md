@@ -1312,4 +1312,21 @@ Linked Lists
 >  }
 >```
 >
+>**Implementing LinkedList Class: getFirst Method**
+>- *Returns the first node of the linked list.*
+>
+>**Example Use**:
+>```
+>const list = new LinkedList();
+>list.insertFirst('a');
+>list.insertFirst('b');
+>list.getFirst(); // returns Node instance with data 'a'
+>```
+>
+>**Example Code**:
+>```
+>  getFirst() {
+>    return this.head;
+>  }
+>```
 >
