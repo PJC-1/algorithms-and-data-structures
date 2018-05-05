@@ -1330,3 +1330,27 @@ Linked Lists
 >  }
 >```
 >
+>**Implementing LinkedList Class: getLast Method**
+>- *Returns the last node of the linked list*
+>
+>**Example Use**
+>```
+>const list = new LinkedList();
+>list.insertFirst('a');
+>list.insertFirst('b');
+>list.getLast(); // returns node with data 'a'
+>```
+>
+>**Example Code**
+>```
+>  getLast() {
+>    let node = this.head;
+>    let lastNode = null;
+>    while(node) {
+>      lastNode = node;
+>      node = node.next;
+>    }
+>    return lastNode;
+>  }
+>```
+>
