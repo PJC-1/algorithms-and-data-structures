@@ -34,14 +34,30 @@ class LinkedList {
   }
 
   getLast() {
+    if(!this.head) {
+      return null;
+    }
+
     let node = this.head;
-    let lastNode = null;
+
     while(node) {
-      lastNode = node;
+      if(!node.next) {
+        return node;
+      }
       node = node.next;
     }
-    return lastNode;
   }
+
+  // getLast() {
+  //   let node = this.head;
+  //   let lastNode = null;
+  //   while(node) {
+  //     lastNode = node;
+  //     node = node.next;
+  //   }
+  //   return lastNode;
+  // }
+
 }
 
 module.exports = { Node, LinkedList };

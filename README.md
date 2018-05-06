@@ -1341,7 +1341,7 @@ Linked Lists
 >list.getLast(); // returns node with data 'a'
 >```
 >
->**Example Code**
+>**Example Code 1**
 >```
 >  getLast() {
 >    let node = this.head;
@@ -1351,6 +1351,25 @@ Linked Lists
 >      node = node.next;
 >    }
 >    return lastNode;
+>  }
+>```
+>
+>**Example Code 2**
+>*This alternate solution eliminates the need for storage of ```lastNode```*
+>```
+>  getLast() {
+>    if(!this.head) {
+ >     return null;
+>    }
+>
+>    let node = this.head;
+>
+>    while(node) {
+>      if(!node.next) {
+>        return node;
+>      }
+>      node = node.next;
+>    }
 >  }
 >```
 >
