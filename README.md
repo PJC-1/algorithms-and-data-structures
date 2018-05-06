@@ -1373,3 +1373,22 @@ Linked Lists
 >  }
 >```
 >
+>**Implementing LinkedList Class: clear Method**
+>- *Empties the linked list of any nodes.*
+>
+>**Example Use**:
+>```
+>const list = new LinkedList();
+>list.insertFirst('a');
+>list.insertFirst('b');
+>list.clear();
+>list.size(); // returns 0
+>```
+>
+>**Example Code**
+>```
+>  clear() {
+>    this.head = null;
+>  }
+>```
+>
