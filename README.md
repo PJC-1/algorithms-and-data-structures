@@ -1392,3 +1392,27 @@ Linked Lists
 >  }
 >```
 >
+>**Implementing Linked List Class: removeFirst Method**
+>- *Removes the last node of the chain*
+>
+>**Example Use**:
+>```
+>const list = new LinkedList();
+>list.insertFirst('a');
+>list.insertFirst('b');
+>list.removeLast();
+>list.size(); // returns 1
+>list.getLast(); // returns node with data of 'b'
+>```
+>
+>**Example Code**:
+>```
+>  removeFirst() {
+>    if(!this.head) {
+>      return;
+>    }
+>    this.head = this.head.next;
+>  }
+>```
+>
+>
