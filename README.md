@@ -1415,4 +1415,38 @@ Linked Lists
 >  }
 >```
 >
+>**Implement LinkedList class: removeLast Method**
+>- *Removes the last node of the chain*
+>
+>**Example Use**
+>```
+>const list = new LinkedList();
+>list.insertFirst('a');
+>list.insertFirst('b');
+>list.removeLast();
+>list.size(); // returns 1
+>list.getLast(); // returns node with data of 'b'
+>```
+>
+>**Example Code**
+>```
+>  removeLast() {
+>    if(!this.head) {
+>      return;
+>    }
+ >   if(!this.head.next) {
+>      this.head = null;
+>      return;
+>    }
+>
+>    let previous = this.head;
+>    let node = previous.next;
+>
+>    while(node.next) {
+>      previous = node;
+>      node = node.next;
+>    }
+>    previous.next = null;
+>  }
+>```
 >

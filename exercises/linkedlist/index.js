@@ -79,16 +79,13 @@ class LinkedList {
     }
 
     let previous = this.head;
-    let current = previous.next;
+    let node = previous.next;
 
-    while(previous.next) {
-      if(!current.next) {
-        previous.next = null;
-        return;
-      }
-      previous = current;
-      current = current.next;
+    while(node.next) {
+      previous = node;
+      node = node.next;
     }
+    previous.next = null;
   }
 
 }
