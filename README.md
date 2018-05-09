@@ -1450,3 +1450,27 @@ Linked Lists
 >  }
 >```
 >
+>**Implementing LinkedList class: insertLast Method**
+>- *Inserts a new node with provided data at the end of the chain*
+>
+>**Example Use**:
+>```
+>const list = new LinkedList();
+>list.insertFirst('a');
+>list.insertFirst('b');
+>list.insertLast('c');
+>list.getLast(); // returns node with data 'C'
+>```
+>
+>**Example Code**:
+>```
+>  insertLast(data) {
+>    const last = this.getLast();
+>    if(last) {
+>      last.next = new Node(data);
+>    } else {
+>      this.head = new Node(data);
+>    }
+>  }
+>```
+>
