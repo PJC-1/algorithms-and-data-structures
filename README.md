@@ -1474,3 +1474,20 @@ Linked Lists
 >  }
 >```
 >
+>**Implementing LinkedList class: getAt Method**
+>- *Returns the node at the provided index*
+>
+>**Example Use**:
+>```
+>const list = new List();
+>list.insertFirst('a');
+>list.insertFirst('b');
+>list.insertFirst('c');
+>list.getAt(1); // returns node with data 'b'
+>```
+>
+>**Example Code**:
+>```
+>
+>```
+>
