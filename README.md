@@ -1504,3 +1504,36 @@ Linked Lists
 >  }
 >```
 >
+>**Implementing LinkedList class: removeAt method**
+>- *Removes node at the provided index*
+>
+>**Example Use**:
+>```
+>const list = new List();
+>list.insertFirst('a');
+>list.insertFirst('b');
+>list.insertFirst('c');
+>list.removeAt(1);
+>list.getAt(1); // returns node with data 'a'
+>```
+>
+>**Example Code**:
+>```
+>  removeAt(index) {
+>    if(!this.head) {
+>      return;
+>    }
+>
+>    if(index === 0) {
+>      this.head = this.head.next;
+>      return;
+>    }
+>
+>    const previous = this.getAt(index - 1);
+>    if(!previous || !previous.next) {
+>      return;
+>    }
+>    previous.next = previous.next.next;
+>  }
+>```
+>

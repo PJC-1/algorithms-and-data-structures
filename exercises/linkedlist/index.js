@@ -113,10 +113,6 @@ class LinkedList {
   }
 
   removeAt(index) {
-    let counter = 0;
-    let node = this.head;
-    let previous = null;
-
     if(!this.head) {
       return;
     }
@@ -126,19 +122,12 @@ class LinkedList {
       return;
     }
 
-    while(node) {
-      if(index === counter) {
-        previous.next = node.next;
-        return node;
-      }
-      counter++;
-      previous = node;
-      node = node.next;
+    const previous = this.getAt(index - 1);
+    if(!previous || !previous.next) {
+      return;
     }
-    return null;
+    previous.next = previous.next.next;
   }
-
-
 }
 
 module.exports = { Node, LinkedList };
