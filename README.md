@@ -1537,3 +1537,36 @@ Linked Lists
 >  }
 >```
 >
+>**Implement LinkedList class: insertAt method**
+>-*Create an insert a new node at provided index. If index is out of bounds, add the node to the end of the list.*
+>
+>**Example Use**:
+>```
+>const list = new List();
+>list.insertFirst('a');
+>list.insertFirst('b');
+>list.insertFirst('c');
+>list.insertAt('Hi', 1)
+>list.getAt(1); // returns node with data 'Hi'
+>```
+>
+>**Example Code**
+>```
+>  insertAt(data, index) {
+>    if(!this.head) {
+>      this.head = new Node(data);
+>      return;
+>    }
+>
+>    if(index === 0) {
+>      this.head = new Node(data, this.head);
+>      return;
+>    }
+>
+>    const previous = this.getAt(index - 1) || this.getLast();
+>    const node = new Node(data, previous.next);
+>    previous.next = node;
+>
+>   }
+>```
+>
