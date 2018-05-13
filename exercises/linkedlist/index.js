@@ -174,17 +174,27 @@ class LinkedList {
    }
 
    forEach(fn) {
-     if(!this.head) {
-       return;
-     }
-
      let node = this.head;
-
+     let counter = 0;
      while(node) {
-       fn(node);
+       fn(node, counter);
        node = node.next;
+       counter++;
      }
    }
+
+   // forEach(fn) {
+   //   if(!this.head) {
+   //     return;
+   //   }
+   //
+   //   let node = this.head;
+   //
+   //   while(node) {
+   //     fn(node);
+   //     node = node.next;
+   //   }
+   // }
 }
 
 module.exports = { Node, LinkedList };
