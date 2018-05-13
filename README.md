@@ -1570,3 +1570,37 @@ Linked Lists
 >   }
 >```
 >
+>**Implementing Linked List class: forEach method**
+>- *Calls the provided function with every node of the chain*
+>
+>**Example Use**:
+>```
+>const list = new List();
+>
+>list.insertLast(1);
+>list.insertLast(2);
+>list.insertLast(3);
+>list.insertLast(4);
+>
+>list.forEach(node => {
+>node.data += 10;
+>});
+>list.getAt(0); // Returns node with data '11'
+>```
+>
+>**Example Code: Solution 1**:
+>```
+>   forEach(fn) {
+>     if(!this.head) {
+>       return;
+>     }
+>
+>     let node = this.head;
+>
+>     while(node) {
+>       fn(node);
+>       node = node.next;
+>     }
+>   }
+>```
+>
