@@ -1617,3 +1617,33 @@ Linked Lists
 >   }
 >```
 >
+>**Implementing LinkedList class: for...of Loop compatibility**
+>- *Linked list should be compatible as the subject of a 'for...of' loop*
+>
+>**Example Use**:
+>```
+>const list = new List();
+>
+>list.insertLast(1);
+>list.insertLast(2);
+>list.insertLast(3);
+>list.insertLast(4);
+>
+>for (let node of list) {
+>node.data += 10;
+>}
+>
+>node.getAt(1); // returns node with data 11
+>```
+>
+>**Example Code**:
+>```
+>   *[Symbol.iterator]() {
+>     let node = this.head;
+>     while(node) {
+>       yield node;
+>       node = node.next;
+>     }
+>   }
+>```
+>
