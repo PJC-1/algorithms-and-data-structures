@@ -1771,3 +1771,24 @@ Trees
 >- *Breadth-First Traversal*: Starting at the most parent node. Then proceeding to move down to the next level children and visit each node from left to right. In Breadth-First, moving left to right would include nodes that do not share a common parent.
 >- *Depth-First Traversal*: Start at the top most parent node. Proceed down the children starting from the furthest left. And once all children have been visited, move back to the closest parent node and move down the next child starting from the furthest left child node. With Depth-First Traversal, you try to get to the bottom of the tree as quickly as possible.
 >
+>**Implementing the Node Class*
+>- *Create the node class. The constructor should accept an argument that gets assigned to the data property and initialize an empty array for storing children. The node class should have methods add and remove.*
+>
+>**Node class: add method**
+>-*Given some data, create a new node and add it to the current node's children array*
+>
+>**Example Code**:
+>```
+>class Node {
+>  constructor(data) {
+>    this.data = data;
+>    this.children = [];
+>  }
+>
+>  add(data) {
+>    this.children.push(new Node(data));
+>  }
+>  
+>}
+>```
+>
