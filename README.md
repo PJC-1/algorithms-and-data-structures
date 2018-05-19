@@ -1752,3 +1752,22 @@ fromLast with LinkedList
 >}
 >```
 >
+
+Trees
+-------------
+>**Labeling**
+>*Node*:
+>- An individual **node** will hold some data.
+>- Will have a reference to all of it's **children**.
+>*Child*
+>- Any **node** that is directly underneath a given **node**, or **parent** node.
+>- The **parent-child** relationship between **nodes** in a **tree** is an important characteristic of trees.
+>*Siblings*
+>- We refer to **nodes** at a given **level** as **siblings**.
+>- We would **not** refer to **nodes** at a common **level**, but belonging to a **different** **parent** as **siblings**.
+> *Tree Traversal*
+>- To **iterate** through all the different **elements** in a **tree**.
+>- There are **2** main ways to **iterate** through a **tree**, or specific **order** to **traverse** the **tree**: **Breadth-First Traversal** & **Depth-First Traversal**
+>- *Breadth-First Traversal*: Starting at the most parent node. Then proceeding to move down to the next level children and visit each node from left to right. In Breadth-First, moving left to right would include nodes that do not share a common parent.
+>- *Depth-First Traversal*: Start at the top most parent node. Proceed down the children starting from the furthest left. And once all children have been visited, move back to the closest parent node and move down the next child starting from the furthest left child node. With Depth-First Traversal, you try to get to the bottom of the tree as quickly as possible.
+>
