@@ -1792,3 +1792,27 @@ Trees
 >}
 >```
 >
+>**Node class: remove method**
+>- *Given some data, look at each child of the current node and remove any node with data === data*
+>
+>**Example Code**
+>```
+>class Node {
+>  constructor(data) {
+>    this.data = data;
+>    this.children = [];
+>  }
+>
+>  add(data) {
+>    this.children.push(new Node(data));
+>  }
+>
+>  remove(data) {
+>    this.children = this.children.filter(node => {
+>      return node.data !== data;
+>    });
+>  }
+>
+>}
+>```
+>
