@@ -1816,3 +1816,42 @@ Trees
 >}
 >```
 >
+>**Tree Class**
+>- *Create a tree class. The tree constructor should initialize a 'root' property to null.*
+>
+>**Example Use**:
+>```
+>  const node = new Node("TEST");
+>  const tree = new Tree();
+>  tree.root = node;
+>  console.log(tree);
+>
+>// output
+>  =>Tree { root: Node { data: 'TEST', children: [] } }
+>```
+>
+>**Example Code**:
+>```
+>class Tree {
+>  constructor() {
+>    this.root = null;
+>  }
+>}
+>
+>```
+>
+>**Breadth-First Traversal**
+>- *Implement 'traverseBF' on the tree class.  Each method should accept a function that gets called with each element in the tree*
+>
+>**Example Code**:
+>```
+>  traverseBF(fn) {
+>    const arr = [this.root];
+>    while(arr.length) {
+>      const node = arr.shift();
+>      arr.push(...node.children);
+>      fn(node);
+>    }
+>  }
+>```
+>
