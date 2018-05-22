@@ -1855,3 +1855,21 @@ Trees
 >  }
 >```
 >
+>**Depth-First Traversal**
+>- *Implement 'traverseDF' on the tree class.  Each method should accept a function that gets called with each element in the tree*
+>
+>**Notes**:
+>- With Depth-First, the big different is that the children will be added to the front of the **array**, instead of the end of the array like we did with the **Breadth-First** implementation.
+>
+>**Example Code**:
+>```
+>  traverseDF(fn) {
+>    const arr = [this.root];
+>    while(arr.length) {
+>      const node = arr.shift();
+>      arr.unshift(...node.children);
+>      fn(node);
+>    }
+>  }
+>```
+>
