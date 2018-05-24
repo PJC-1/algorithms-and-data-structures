@@ -1909,4 +1909,11 @@ Trees
 >}
 >```
 >
+>**Binary Search Tree**
+>- In a **Binary Search Tree** we limit the number of children a parent node can have to 2.
+>- We also have the child node to the left will have a **value** less than the parent.
+>- While the child node to the right will have a **value** greater than the parent.
+>- Since we only have 2 child nodes, rather than keep them in an **array**, we create them as objects with a property of value.
+>
+>
 >
