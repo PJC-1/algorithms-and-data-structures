@@ -1,13 +1,9 @@
-
 Algorithms and Data-Structures
 ===================
-> Learning about *Algorithms* and *Data-Structures* from **Stephen Grider's** course:
-> [The Coding Interview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/coding-interview-bootcamp-algorithms-and-data-structure/)
+> Learning about *Algorithms* and *Data-Structures*.
 
 Jest
 -------------
->
->For more information on [jest](https://facebook.github.io/jest/).
 >
 >A helpful article that resolves the an issue with Jest, ["Error: \`fsevents\` unavailable" on jest --watch](https://github.com/cm-pliser-tdd-by-example/tdd-by-example-js/issues/10).
 >
@@ -1919,5 +1915,48 @@ Trees
 >- While the child node to the right will have a **value** greater than the parent.
 >- Since we only have 2 child nodes, rather than keep them in an **array**, we create them as objects with a property of value.
 >
+>**Implementing Binary Search Tree Node class**
 >
+>**Directions**
+> 1) *Implement the Node class to create a binary search tree.  The constructor should initialize values 'data', 'left', and 'right'.*
+> 2) Implement the 'insert' method for the Node class.  Insert should accept an argument 'data', then create an insert a new node at the appropriate location in the tree.
+> 3) Implement the 'contains' method for the Node class.  Contains should accept a 'data' argument and return the Node in the tree with the same value.
+>
+>**Example Code**:
+>```
+>class Node {
+>  constructor(data) {
+>    this.data = data;
+>    this.left = null;
+>    this.right = null;
+>  }
+>
+>  insert(data) {
+>    if(data < this.data && this.left) {
+ >     this.left.insert(data);
+>    } else if(data < this.data) {
+>      this.left = new Node(data);
+>    } else if(data > this.data && this.right) {
+ >     this.right.insert(data);
+>    } else if (data > this.data) {
+>      this.right = new Node(data);
+>    }
+>  }
+>
+>  contains(data) {
+>    if(this.data === data) {
+>      return this;
+>    }
+>
+>    if(this.data < data && this.right) {
+>      return this.right.contains(data);
+>    } else if(this.data > data && this.left) {
+>      return this.left.contains(data);
+>    }
+>
+>    return null;
+>  }
+>
+>}
+>```
 >
