@@ -1,9 +1,13 @@
+
 Algorithms and Data-Structures
 ===================
-> Learning about *Algorithms* and *Data-Structures*.
+> Learning about *Algorithms* and *Data-Structures* from **Stephen Grider's** course:
+> [The Coding Interview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/coding-interview-bootcamp-algorithms-and-data-structure/)
 
 Jest
 -------------
+>
+>For more information on [jest](https://facebook.github.io/jest/).
 >
 >A helpful article that resolves the an issue with Jest, ["Error: \`fsevents\` unavailable" on jest --watch](https://github.com/cm-pliser-tdd-by-example/tdd-by-example-js/issues/10).
 >
