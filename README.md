@@ -1994,3 +1994,24 @@ Events
 > **Directions**
 >- *Create an 'eventing' library out of the Events class.  The Events class should have methods 'on', 'trigger', and 'off'.*
 >
+>**Example Code of Event Library Implementation in jQuery**:
+>```
+>    // use .on method to attach an event listener and callback.
+>    $('button').on('click', () => {
+>      console.log("Hello");
+>    });
+>
+>    // able to assign multiple callbacks to an event of the same name
+>    $('button').on('click', () => {
+>      console.log("There");
+>    });
+>
+>    // able to invoke the event progamatically using .tigger method
+>    $('button').trigger('click');
+>
+>    // able to unassign a specified >event using the .off method
+>    $('button').off('click');
+>
+>```
+>
+>
