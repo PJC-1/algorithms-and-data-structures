@@ -2048,3 +2048,19 @@ Events
 >}
 >```
 >
+
+How would you design Twitter?
+-------------
+> **High Level Notes**
+>- *There is no right answer.*
+> The interviewer is more looking for how effectively you can communicate rather than a specific blue prints on how to build the service.
+>- *Every interviewer will expect a different answer.*
+> Interviewer 'A' might want to hear about to identify challenges, while interviewer 'B' might want to know how you would scale the product for 'x' amount of users.
+> A good way to approach this type of question is to ask the interview what area of the product they would like to explore.
+>- *Focus is usually on the data model.*
+>- *Don't mention specific technologies.*
+>- *Draw stuff.*
+>- *Talk.*
+>
+>
+>
