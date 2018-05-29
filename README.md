@@ -2058,9 +2058,28 @@ How would you design Twitter?
 > Interviewer 'A' might want to hear about to identify challenges, while interviewer 'B' might want to know how you would scale the product for 'x' amount of users.
 > A good way to approach this type of question is to ask the interview what area of the product they would like to explore.
 >- *Focus is usually on the data model.*
+> A good place to start is how you would setup a database that would reflect the data/information for the product.
 >- *Don't mention specific technologies.*
+>**Why** you would pick a specific technology over **what** technology is more along the lines of what the interviewer is interesting in hearing.
 >- *Draw stuff.*
+>Diagrams or drawing out specific views/UI can help guide the discussion and show that you understand the product that you are trying to build.
 >- *Talk.*
+>Talking is the most important point out of all of these tips.
+>Voice what your thinking.
+>Don't tell the interviewer that your organizing your thoughts, this leads to uncomfortable silence.
+>When receiving a questions, instantly respond by either asking a question or talking.
+>You can always try to get more incites as to what is going on or give the interviewer some idea of what you are thinking.
 >
+>**How to get started (tips)**
+>- *Identify Two Core Features*
+>This is where drawing a diagram of the UI can be helpful.
+>Out of all the possible features, choose the 2 that you feel you would like to dive into.
+>Begin to think about how these features work.
+>- *Possible Implementation*
+>
+>
+>- *Identify and Address Difficulties*
+>
+>- *Solutions For Scaling*
 >
 >
