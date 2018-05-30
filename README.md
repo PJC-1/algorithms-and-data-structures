@@ -2076,10 +2076,13 @@ How would you design Twitter?
 >Out of all the possible features, choose the 2 that you feel you would like to dive into.
 >Begin to think about how these features work.
 >- *Possible Implementation*
->
->
+>Think about the different things that are happening during the process/workflow of a particular feature.
 >- *Identify and Address Difficulties*
->
+>Some questions you might ask yourself are:
+>1) *How a single instance of a resource would look like in the database?*
+>2) *How are systems (that are a part of the product) such as '#topic', '@mention', or 'following' made?
 >- *Solutions For Scaling*
->
+>- 2 general ideas/topics for scaling a product for many users would be **Caching** and **Deployment Options**.
+>- *Caching*: The general idea is a user would go to the *Server* and request some data from the *Database*, where the data being requested is *computationally expensive*. So at some point where a lot of users are all requesting the same data at the same time, handling all of those requests would become very expensive quite quickly. One possible way of combating this problem, is for a particular user, i.e. "user 1", when they first request the data, the server will compute that expensive transaction and send that data as a response to the user, we would also store that data in some sort of *memory store*. So if "user 1" were to come back in a certain amount time (i.e. 5 minutes), rather than going back to the database and running that expensive transaction, we could go to that memory store and send that data to the user.
+>*Deployment Options*: One answer would be to focus on the server architecture and expand it by creating a *Load Balancer*, so whenever a user makes a request to the application, it would first be processed by the *Load Balancer* where it will randomly assign that request to any one of a number of identical servers. This would relieve the stress on a single server and be able to handle a higher number of requests.
 >
