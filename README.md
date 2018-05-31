@@ -2086,3 +2086,21 @@ How would you design Twitter?
 >- *Caching*: The general idea is a user would go to the *Server* and request some data from the *Database*, where the data being requested is *computationally expensive*. So at some point where a lot of users are all requesting the same data at the same time, handling all of those requests would become very expensive quite quickly. One possible way of combating this problem, is for a particular user, i.e. "user 1", when they first request the data, the server will compute that expensive transaction and send that data as a response to the user, we would also store that data in some sort of *memory store*. So if "user 1" were to come back in a certain amount time (i.e. 5 minutes), rather than going back to the database and running that expensive transaction, we could go to that memory store and send that data to the user.
 >*Deployment Options*: One answer would be to focus on the server architecture and expand it by creating a *Load Balancer*, so whenever a user makes a request to the application, it would first be processed by the *Load Balancer* where it will randomly assign that request to any one of a number of identical servers. This would relieve the stress on a single server and be able to handle a higher number of requests.
 >
+
+Sorting Algorithm Overview
+-------------
+>- Generally, in an interview setting, a *sorting algorithm* will be about sorting the elements of an **array** from *lowest to highest*.
+>
+>The **3** different *sorting algorithms* that we will go over are, with there corresponding level of difficulty for implementation:
+>- BubbleSort (*easiest*)
+>- SelectionSort (*easier*)
+>- MergeSort (*medium*)
+>
+>There are many *sorting algorithms*, but these **3** are the most common and easiest to implement.
+>
+>*BubbleSort* and *SelectionSort* have the same *Worst Case Runtime* of ```n^2```, that means for every additional element that we add to the collection to sort it will take significantly more work than the time added for the previous element added.
+>
+>This means that *BubbleSort* and *SelectionSort* are poor algorithms to sort large data sets, but if your data set is small and will always remain small then using these either of these algorithms will work fine.
+>
+>*MergeSort* has a *Worst Case Runtime* of ```n*log(n)```, or for every additional element added to our sort will add slightly more time to process than the element we have previously added. So it would not grow as quickly as a ```n^2``` runtime, but it will be growing quite rapidly.
+>
