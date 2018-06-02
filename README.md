@@ -2144,4 +2144,24 @@ Sorting Algorithm Overview
 >}
 >```
 >
+>**MergeSort Implementation: Merge Function**:
+>- The ```mergeSort``` algorithm generally uses a *recursive* solution.
+>- The ```merge``` algorithm is not *recursive*, it is *iterative*, and takes ```2``` arguments (*2 sorted arrays, that are sorted from lowest to highest*)
+>- The purpose of the ```merge``` function is to *merge* the two sorted arrays into a single *sorted array*.
+>
+>**Merge Function Example Code**:
+>```
+>function merge(left, right) {
+>  const results = [];
+>
+>  while(left.length && right.length) {
+>    if(left[0] < right[0]) {
+>      results.push(left.shift());
+>    } else {
+>      results.push(right.shift());
+>    }
+>  }
+>  return [...results, ...left, ...right];
+>}
+>```
 >
