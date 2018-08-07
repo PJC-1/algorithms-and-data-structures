@@ -72,6 +72,26 @@ Reverse String
 >
 >*Notes on Method 3*:
 >- [MDN docs on Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+>- The ```reduce()``` method reduces the array to a single value.
+>- The ```reduce()``` method executes a provided function for each value of the array (*from left-to-right*).
+>- The return value of the function is stored in an accumulator (*result/total*).
+>- **Note**: ```reduce()``` does not execute the function for array elements without values.
+>
+>**reduce() example**:
+>```
+>const array1 = [1, 2, 3, 4];
+>const reducer = (accumulator, currentValue) => accumulator + currentValue;
+>
+>// 1 + 2 + 3 + 4
+>console.log(array1.reduce(reducer));
+>// expected output: 10
+>
+>// 5 + 1 + 2 + 3 + 4
+>console.log(array1.reduce(reducer, 5));
+>// expected output: 15
+>```
+>
+>
 >
 
 Palindrome
