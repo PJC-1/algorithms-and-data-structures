@@ -10,7 +10,6 @@ function reverse(str) {
   return str.split('').reduce((rev, char) => char + rev, '');
 }
 
-
 // Solution 1
 // function reverse(str) {
 //   return str.split('').reverse().join('');
@@ -25,6 +24,11 @@ function reverse(str) {
 //   }
 //
 //   return reversed;
+// }
+
+// Solution 3
+// function reverse(str) {
+//   return str.split('').reduce((rev, char) => char + rev, '');
 // }
 
 module.exports = reverse;

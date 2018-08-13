@@ -3,6 +3,56 @@ Algorithms and Data-Structures
 > Learning about *Algorithms* and *Data-Structures* from **Stephen Grider's** *Udemy* course: [The Coding Interview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/coding-interview-bootcamp-algorithms-and-data-structure/).
 >
 
+debugger
+-------------
+>
+>[MDN web documentation on debugger](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger)
+>
+>The **debugger statement** invokes any available debugging functionality, such as setting a breakpoint. If no debugging functionality is available, this statement has no effect.
+>
+>When using the **debugger**, you will need to explicitly call the function.
+>**Example snippet**:
+>```
+>// exercises/reversestring/index.js
+>
+>function reverse(str) {
+>  debugger;
+>  return str.split('').reduce((rev, char) => char + rev, '');
+>}
+>
+>reverse('abcd');
+>```
+>
+>From the *terminal*, ```cd``` into the specific exercises directory, and run the command ```node inspect index.js```.
+>**Example running the debugger from the terminal**:
+>```
+>$ cd reversestring/
+>$ node inspect index.js
+>< Debugger listening on ws://127.0.0.1:9229/2b9fd41c-f67c-441e-81ef-bc9fd50f008a
+>< For help, see: https://nodejs.org/en/docs/inspector
+>< Debugger attached.
+>Break on start in index.js:1
+>> 1 (function (exports, require, module, __filename, __dirname) { // --- Directions
+>2 // Given a string, return a new string with the reversed
+>3 // order of characters
+>debug>
+>```
+>
+>Now that the file is started in *debugger mode*, it has *paused* execution on the very first line of the file and is *ready* to *inspect* the code.
+>
+>You can enter ```cont``` (which stands for *continue*, and can be ran as ```c``` for short-hand) into the console to resume execution the code.
+>
+>Use the command ```repl``` which will start up a **javascript console**, where you can start to inspect *variables* that exists inside of our codebase.
+>Example:
+>```
+>debug> repl
+>Press Ctrl + C to leave debug repl
+>> str
+>'abcd'
+>>
+>```
+>
+
 Jest
 -------------
 >
