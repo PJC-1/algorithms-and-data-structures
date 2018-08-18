@@ -172,6 +172,11 @@ Palindrome
 >*Method 2 - use of Array.prototype.every()*
 >- Use ```split()``` to convert ```str``` into an ```array```.
 >- Use ```every()``` array helper to check the contents of the array and return a ```boolean```.
+> ```every()``` will return ```true``` if the *callback function* returns a **truthy** value for **every** array element, otherwise it will return ```false```.
+> This characteristic of the ```every()``` method is what makes it a perfect fit for achieving this use-case, once the method runs into a value that does not satisfy the condition in the *callback function*, ```every()``` will immediately return ```false```.
+> The **callback** is invoked with ```3``` arguments: the value of the element (```char```), the index of the element (```i```), and the Array object being traversed (which is *not* used in the *palindrome* example).
+> It is also worth noting that: ```every()``` does not mutate the array on which it is called.
+>
 >
 >*Example Code*:
 >```
