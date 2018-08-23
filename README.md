@@ -248,6 +248,35 @@ Max Character
 >
 >**How to break down this problem**
 >- You will want to convert the passed in ```string``` into an ```object```, where the ```key```s are the ```character```s and the ```value```s are the ```number``` of times that ```character``` appears in the given ```string```.
+> *Example of character mapping of a given string*:
+> ```
+> const  string = "Hello World!";
+>const chars = {};
+>
+>for (let char of  string) {
+>  if (!chars[char]) {
+>    chars[char] = 1;
+>  } else {
+>    chars[char]++;
+>  }
+>}
+>
+>console.log(chars);
+>
+>// output
+>{
+>    H: 1,
+>    e: 1,
+>    l: 3,
+>    o: 2,
+>    ' ': 1,
+>    W: 1,
+>    r: 1,
+>    d: 1,
+>    '!': 1
+>}
+> ```
+>
 >- This concept of building a map of ```items``` seen in a given ```string```, can be used to solve many common ```string``` questions. Such as:
 >1. *What is the most common character in the string?*
 >2. *Does string 'A' have the same characters as string 'B' (is it an anagram)?*
