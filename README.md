@@ -281,7 +281,7 @@ Max Character
 >1. *What is the most common character in the string?*
 >2. *Does string 'A' have the same characters as string 'B' (is it an anagram)?*
 >3. *Does the given string have any repeated characters in it?*
->- After building the object, we can ```iterate``` through the object and find the ```character``` with the highest ```value```.
+>- After building the object, we can ```iterate``` through the object and find the ```character``` with the highest ```value``` by setting ```2``` variables: ```max``` which will hold the *highest value* and ```maxChar``` which will hold the *letter* that corresponds to that *highest value*.
 >
 >*Example Code*:
 >```
