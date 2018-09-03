@@ -627,6 +627,7 @@ Steps
 >- Figure out the bare minimum pieces of information to represent your problem.
 >- Give reasonable defaults to the bare minimum pieces of info.
 >- Check the base case. Is there any work left to do? If not, return.
+>- When some work is done and you are calling your function again, make sure the arguments have changed in some fashion. If the function is called again and the arguments are unchanged it will likely result in a infinite loop.
 >
 > *Recursion Example*:
 > ```
