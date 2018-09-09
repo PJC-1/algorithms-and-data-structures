@@ -1079,13 +1079,13 @@ Big 'O' Notation
 
 Identifying Runtime Complexity
 -------------
->- *Iterating with a simple for loop through a single collection?* -> Probably **O(n)**
->- *Iterating through half a collection?* -> Still **O(n)**. There are no constants in runtime.
->- *Iterating through two different collections with separate for loops?* -> **O(n + m)**
->- *Two nested for loops iterating over the same collection?* -> **O(n^2)**
->- *Tow nested for loops iterating over different collections* -> **O(n*m)**
->- *Sorting?* -> **O(n*log(n)**
->
+>- *Iterating with a simple for loop through a single collection?* -> Probably ```O(n)```
+>- *Iterating through half a collection?* -> Still ```O(n)```. There are no constants in runtime.
+>- *Iterating through two different collections with separate for loops?* -> ```O(n + m)```
+>- *Two nested for loops iterating over the same collection?* -> ```O(n^2)```
+>- *Two nested for loops iterating over different collections* -> ```O(n*m)```
+>- *Sorting?* -> ```O(n*log(n)```
+>- *Searching a sorted array?* -> ```O(log(n))```
 
 
 Space Complexity
@@ -1095,7 +1095,7 @@ Space Complexity
 >In general you can apply a lot of the same rules around *runtime complexity* to *space complexity*.
 >An example of this, is in the **String Reverse** problem. In that case for every additional character that we added into our input set we had one additional character that we needed to return in the output set of data.
 >So the amount of *memory* that we spent was linear because for every one additional character we needed one additional element in our *string* to be added.
->
+>Another example is the **Steps Algorithm**, where the **Runtime Complexity** is **quadratic** (```N^2```) because as ```n``` increased by one, we had to do way more total things. When the steps were ```4``` we had to store ```16``` elements in memory, so the **Space Complexity** for this algorithm is also **quadratic**.
 
 Data Structures
 -------------
