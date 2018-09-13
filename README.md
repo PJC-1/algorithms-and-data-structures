@@ -1104,6 +1104,9 @@ Data Structures
 >- *Ways of organizing information with optimal 'runtime complexity' for adding, editing, or removing records.*
 >- *Javascript natively implements several data structures*. You will still be asked about **inferior** data structures.
 >
+>In the context of an interview usually a lot of these **data structure** questions are really themed around **run-time complexity**.
+>When you're asked to writing a function, one of the first things you want to think of is: *What data structure can I use to solve this problem, that has some optimal runtime complexity for what we're trying to solve. *
+>
 
 Queue
 -------------
