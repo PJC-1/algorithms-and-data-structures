@@ -1129,7 +1129,7 @@ Queue
 >
 >In order to **remove** an *item* from the end of the array we can use **javascript** ```array.pop()```. Which will be used to **remove a record from the queue**.
 >
->One way making a **queue** would be to make a **queue** ```class``` in **ES 2015*. Inside this ```class``` we can *initialize* an **array** and only *expose* the ```unshift()``` and ```pop``` *methods* outside of the ```class```. Basically, we want to hide access to all the other functionality of the ```Array```.
+>One way making a **queue** would be to make a ```Queue Class``` in **ES 2015*. Inside this ```class``` we can *initialize* an **array** and only *expose* the ```unshift()``` (to *add* records) and ```pop()``` (to *remove* records) *methods* outside of the ```class```. Basically, we want to hide access to all the other functionality of the ```Array```.
 >
 >**Create a Queue Data Structure in JavaScript**
 >*The queue should be a class with methods 'add' and 'remove'. Adding to the queue should store an element until it is removed*
